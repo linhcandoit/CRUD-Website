@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <%- include("./partials/nav.ejs") %>
+    <h1>All Blogs</h1>
+    <% blogs.forEach((blog) =>{ %>
+    <a href="/blogs/<%= blog._id %>">
+      <h2><%= blog.title %></h2>
+      <p><%= blog.snippet %></p>
+      <p><%= blog.body %></p>
+    </a>
+    <% }) %> <%- include("./partials/footer.ejs") %>
+  </body>
+</html>
